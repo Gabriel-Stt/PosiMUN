@@ -1,0 +1,690 @@
+*{
+  font-family: "Manrope";
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  overflow-x: hidden;
+  margin-bottom: 0px;
+}
+
+h1{
+  font-family: "EB Garamond";
+  font-weight: bold;
+}
+ h2{
+  font-weight: 400;
+  line-height: max(3.5vw, 30px);
+}
+ h3{
+  font-weight: 100;
+}
+ /* Front page */
+.body_frontpage{
+  background-image: url("agenda-2030-da-onu-9.webp");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+ .header_parent{
+  background-color: rgb(20, 27, 44);
+  position: fixed;
+  height: 10vw;
+  max-height: 100px;
+  width: 100vw;
+  margin-top: -10px;
+  margin-right: -30px;
+  margin-left: -10px;
+  padding-right: 5px;
+  box-shadow: 0 3px 10px black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+ .header{
+  height: 10vw;
+  width: 70vw;
+  display: flex;
+  align-items: center;
+}
+
+
+.logo{
+  flex: 25vw;
+}
+ .PosiMUN_logo_círculo{
+  height: max(5vw, 50px);
+}
+ .buttons{
+  flex: 45vw;
+  display: flex;
+}
+
+
+.home{
+  height: 100%;
+  flex: 15vw;
+  color: rgb(220, 144, 81);
+  background-color: rgb(20, 27, 44);
+  border: 0px;
+  font-weight: 900;
+  transition: all 0.3s;
+  font-size: min(4vw, 17.5px);
+  padding-left: 2.5vw;
+  padding-right: 5vw;
+}
+
+.home_white{
+  height: 100%;
+  flex: 15vw;
+  color: white;
+  background-color: rgb(20, 27, 44);
+  border: 0px;
+  font-weight: 900;
+  transition: all 0.3s;
+  font-size: min(4vw, 17.5px);
+  padding-left: 2.5vw;
+  padding-right: 5vw;
+}
+
+
+.button{
+  height: 100%;
+  flex: 15vw;
+  color: white;
+  background-color: rgb(20, 27, 44);
+  border: 0px;
+  font-weight: bold;
+  position: relative;
+  transition: all 0.3s;
+  font-size: min(4vw, 17.5px);
+  padding-left: 2.5vw;
+  padding-right: 2.5vw;
+}
+
+.button_doc{
+  height: 100%;
+  flex: 15vw;
+  color: rgb(220, 144, 81);
+  background-color: rgb(20, 27, 44);
+  border: 0px;
+  font-weight: bold;
+  position: relative;
+  transition: all 0.3s;
+  font-size: min(4vw, 17.5px);
+  padding-left: 2.5vw;
+  padding-right: 2.5vw;
+}
+
+
+.resources{
+  height: 100%;
+  flex: 15vw;
+  color: white;
+  background-color: rgb(20, 27, 44);
+  border: 0px;
+  font-weight: bold;
+  position: relative;
+  transition: all 0.3s;
+  font-size: min(4vw, 17.5px);
+  padding-left: 2.5vw;
+}
+
+.resources_conference{
+  height: 100%;
+  flex: 15vw;
+  color: rgb(220, 144, 81);
+  background-color: rgb(20, 27, 44);
+  border: 0px;
+  font-weight: bold;
+  position: relative;
+  transition: all 0.3s;
+  font-size: min(4vw, 17.5px);
+  padding-left: 2.5vw;
+  padding-right: 2.5vw;
+}
+
+
+.buttons > div{
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+
+.home:hover, .home_white:hover, .button:hover, .button_doc:hover, .resources:hover, .resources_conference:hover{
+  cursor: pointer;
+  color: rgb(176, 107, 49);
+}
+
+
+.button::before, .button_doc::before, .resources::before, .resources_conference::before{
+  content: "";
+  position: absolute;
+  height: min(5vw, 50px);
+  width: 2px;
+  background-color: rgb(212, 212, 212);
+  z-index: 11;
+  left: 0%; top:50%; transform: translate(-50%, -50%)
+}
+
+
+.title_parent{
+  height: 40vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  margin-right: -10px;
+  margin-left: -10px;
+}
+
+
+.title_parent > h1{
+  font-size: 6.5vw;
+  color: white;
+  font-weight: 100;
+}
+
+
+.PosiMUN_logo_title{
+  width: max(250px, 40vw);
+  height: auto;
+}
+.committee_buttons {
+  width: 100%;
+  height: 10vw; /* Let the height adapt to content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px; /* Optional: Adds space between rows of buttons */
+}
+ .committee_buttons > div {
+  display: flex; /* Apply flex to each div that contains a button */
+  justify-content: center; /* Ensure buttons are centered within their div */
+  align-items: center; /* Ensure buttons are vertically centered */
+  flex: 1; /* Allow divs to grow/shrink to fill space equally */
+}
+ .committee {
+  width: 100%; /* Make buttons take up 100% of the parent div's width */
+  width: max(20vw, 150px); /* Set a max width for the buttons to avoid them stretching too much */
+  height: min(65px, 12.5vw);
+  padding: 10px;
+  font-size: max(16px, 1.5vw);
+  background-color: rgb(20, 27, 44);
+  color: white;
+  border: 2px solid rgb(176, 107, 49);
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+ .committee:hover {
+  background-color: rgb(176, 107, 49);
+}
+ .committee:focus {
+  outline: none;
+}
+ .conteudo_1_parent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(20, 27, 44);
+  width: 100vw;
+  margin-left: -10px;
+  padding-right: 5px;
+  box-shadow: 0 3px 10px black;
+  position: relative;
+  padding-top: 3vw;
+  padding-bottom: 3vw;
+}
+
+ .conteudo_1{
+  width: 70vw;
+  min-width: 350px;
+  color: white;
+}
+ .title_conteudo_1{
+  color: rgb(176, 107, 49);
+  font-size: max(12px, 2vw);
+  text-align: center;
+}
+ .conteudo_conteudo_1{
+  font-size: max(8px, 1vw);
+  font-weight: 200;
+}
+
+
+.conteudo_2_parent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(253, 253, 252);
+  width: 100vw;
+  margin-left: -10px;
+  padding-right: 5px;
+  box-shadow: 0 3px 10px black;
+  position: relative;
+  padding-top: 3vw;
+  padding-bottom: 3vw;
+}
+
+ .conteudo_2{
+  width: 70vw;
+  height: auto;
+  min-width: 350px;
+  color: rgb(20, 27, 44);
+
+
+}
+ .title_conteudo_2{
+  color: rgb(176, 107, 49);
+  font-size: max(12px, 2vw);
+}
+ .title_conteudo_2 > h1{
+  text-align: left;
+}
+
+
+.conteudo_conteudo_2{
+  font-size: max(8px, 1vw);
+  font-weight: 200;
+}
+
+
+.conteudo_3_parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(20, 27, 44);
+  width: 100vw;
+  margin-left: -10px;
+  padding-right: 5px;
+  box-shadow: 0 3px 10px black;
+  position: relative;
+  padding-top: 3vw;
+  padding-bottom: 3vw;
+}
+
+ .conteudo_3 {
+  width: 70vw;
+  min-width: 350px;
+  color: rgb(252, 252, 252);
+}
+ .title_conteudo_3{
+  color: rgb(176, 107, 49);
+  font-size: max(12px, 2vw);
+}
+
+
+.title_conteudo_3 > h1{
+  text-align: left;
+}
+ .conteudo_conteudo_3{
+  font-size: max(8px, 1vw);
+  font-weight: 200;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.maps{
+  width: max(350px, 50vw);
+}
+
+.PosiMUN_logo_end2{
+  height: 12vw;
+  width: auto;
+}
+
+/*Committees*/
+.body_UNSC{
+  background-image: url("Israel\ x\ Palestine.webp");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.body_ECOSOC{
+  background-image: url("2008_crisis.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.body_HOR{
+  background-image: url("Chamber-US-House-of-Representatives-Washington-DC.webp");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.body_FISD{
+  background-image: url("Duma.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.title_topic{
+  color: rgb(176, 107, 49);
+  font-size: max(15px, 2.5vw);
+  text-align: center;
+  margin-top: -3vw;
+  margin-bottom: -1vw;
+}
+
+.conteudo_topic{
+  font-size: max(10px, 1.5vw);
+  font-weight: 200;
+  text-align: center;
+  position: relative;
+  margin-bottom: 5vw;
+}
+
+.conteudo_topic::after{
+  content: "";
+  position: absolute;
+  width: 60vw;
+  height: 7px;
+  border-radius: 50%;
+  background-color: rgb(176, 107, 49);
+  margin-left: -30vw;
+}
+
+/* Container that holds the .download elements */
+.download_parent {
+display: flex;
+justify-content: space-between;  /* Distribute space evenly between the blocks */
+align-items: flex-start;         /* Align children at the top */
+flex-wrap: wrap;                 /* Allow items to wrap to the next line when needed */
+width: 70vw;                     /* Set the width of the container */
+gap: 20px;                       /* Adds spacing between the items when they wrap */
+margin: 0 auto;                  /* Center the container horizontally */
+}
+
+
+/* Each .download item */
+.download {
+flex: 1 1 35vw;                 /* Flex-grow, flex-shrink, and base size (35vw as a base size) */
+max-width: 475px;               /* Limit the maximum width */
+min-width: 200px;               /* Minimum width to avoid making the blocks too small */
+box-sizing: border-box;         /* Include padding and border in the element's total width/height */
+}
+
+.download_rop{
+  flex: 1 70vw;
+  width: max(200px, 70vw);
+  box-sizing: border-box;
+}
+
+
+/* Estilo dos blocos individuais */
+.bloco {
+width: 100%;
+width: max(200px, 30vw);            /* Limit the max width of each bloco */
+margin: 20px 0;                 /* Space between blocks */
+background-color: rgb(20, 27, 44);
+color: white;
+text-align: center;
+padding: 20px;
+border-radius: 10px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+box-shadow: 0 7px 10px rgba(0, 0, 0, 0.7);
+}
+
+.rop {
+width: 100%;
+width: max(200px, 70vw);            /* Limit the max width of each bloco */
+margin: 20px 0;                 /* Space between blocks */
+background-color: rgb(20, 27, 44);
+color: white;
+text-align: center;
+padding: 20px;
+border-radius: 10px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+box-shadow: 0 7px 10px rgba(0, 0, 0, 0.7);
+}
+
+/* Title style */
+.bloco > h2 {
+font-size: max(17.5px, 1.75vw);
+color: rgb(176, 107, 49);
+margin-bottom: 15px;
+margin-top: -2px;
+font-weight: bold;
+}
+
+.rop > h2 {
+font-size: max(17.5px, 1.75vw);
+color: rgb(176, 107, 49);
+margin-bottom: 15px;
+margin-top: -2px;
+font-weight: bold;
+}
+
+/* Circular logo style */
+.logo_circular {
+width: 150px;  /* Logo size */
+height: 140px; /* Logo size */
+margin-bottom: 15px;
+border-radius: 50%;
+background-color: white; /* Background color of the circular logo */
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+
+.logo_circular svg {
+width: 75px;  /* Size of the SVG inside the circle */
+height: 75px;
+}
+
+
+/* Download button style */
+.btn_download {
+background-color: rgb(176, 107, 49);
+color: white;
+border: none;
+padding-top: 20px;
+padding-right: 50px;
+padding-bottom: 20px;
+padding-left: 50px;
+margin-top: 10px;
+margin-bottom: 5px;
+border-radius: 5px;
+cursor: pointer;
+font-size: max(8px, 1.25vw);
+transition: background-color 0.3s ease;
+}
+
+.btn_download_na{
+  background-color: rgb(20, 27, 44);
+  color: rgb(176, 107, 49);
+  border: none;
+  padding-top: 20px;
+  padding-right: 50px;
+  padding-bottom: 20px;
+  padding-left: 50px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  font-size: max(10px, 1.5vw);
+}
+
+
+.btn_download:hover {
+background-color: rgb(150, 91, 43);
+}
+
+
+/* Responsiveness */
+@media (max-width: 300px) {
+/* Adjustments for smaller screens */
+.download_parent {
+  width: 90vw;              /* Make parent container take up more width */
+  gap: 15px;                /* Adjust gap for smaller screens */
+  justify-content: center;  /* Center the blocks horizontally when wrapped */
+  align-items: center;      /* Center the blocks vertically when wrapped */
+  height: 100vh;            /* Take full height of the viewport */
+}
+
+
+/* Each download block will take full width */
+.download {
+  flex: 1 1 100%;            /* Take full width (100%) on small screens */
+  max-width: 100%;           /* Ensure no max width is applied */
+}
+
+
+/* Ensure logo size adjusts */
+.logo_circular {
+  width: 100px;
+  height: 100px;
+}
+
+
+/* Smaller button font on mobile */
+.btn_download {
+  font-size: 0.9rem;
+}
+}
+
+
+.chairs_parent {
+display: flex;
+justify-content: center; /* This will center the content horizontally */
+gap: 2vw; /* Optional, adds space between the chairs */
+}
+
+
+.chairs {
+flex: 35vw; /* This ensures the chairs take up 35% of the viewport width */
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+}
+
+
+.chairs_name > h2 {
+font-weight: bold;
+}
+
+
+.chairs_photo {
+border-radius: 100000px;
+width: 15vw;
+height: auto;
+}
+
+
+/* Media query for small screen sizes */
+@media screen and (max-width: 768px) {
+.chairs_parent {
+  flex-direction: column; /* Stack the items vertically when the screen is narrow */
+  gap: 2vw; /* Space between the stacked items */
+}
+
+
+.chairs {
+  flex: 100%; /* Make each item take up full width when stacked */
+}
+
+
+.chairs_photo {
+  width: 20vw; /* Adjust the image size for smaller screens */
+  height: auto;
+}
+}
+
+.rodapé_parent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(20, 27, 44);
+  width: 100vw;
+  margin-left: -10px;
+  padding-right: 5px;
+  box-shadow: 0 3px 10px black;
+  position: relative;
+  padding-top: 3vw;
+  padding-bottom: 3vw;
+}
+
+.rodapé{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.PosiMUN_logo_end{
+  flex: 1;
+}
+
+.PosiMUN_logo_end2{
+  width: max(190, 35vw);
+  height: max(10vw, 50px);
+}
+
+.info_end {
+  display: flex; /* Keep items inside side by side */
+  justify-content: center;
+  align-items: center;
+  gap: 2vw; /* Add spacing between items */
+}
+
+.info_parent {
+  display: flex;
+  align-items: center; /* Align icons and text vertically */
+  justify-content: center; /* Center content */
+  text-align: center;
+}
+
+.info_logo {
+  display: flex;
+  align-items: center; /* Centers the SVG */
+  justify-content: center;
+  height: 4vw;
+  margin-right: 0.5vw;
+  margin-left: 0.5vw;
+}
+
+.info {
+  display: flex;
+  align-items: center; /* Aligns text vertically with icon */
+  color: white;
+  font-size: max(8px, 1.25vw);
+}
+
+.insta{
+  margin-left: -1.2vw;
+  margin-right: -1.5vw;
+}
+
+.day{
+  font-size: max(14px, 1.75vw);
+  font-weight: bold;
+}
