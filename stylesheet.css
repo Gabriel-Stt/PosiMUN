@@ -58,7 +58,7 @@ h1{
   flex: 25vw;
 }
  .PosiMUN_logo_círculo{
-  height: max(5vw, 50px);
+  height: max(4.5vw, 50px);
 }
  .buttons{
   flex: 45vw;
@@ -217,7 +217,7 @@ h1{
   width: max(20vw, 150px); /* Set a max width for the buttons to avoid them stretching too much */
   height: min(65px, 12.5vw);
   padding: 10px;
-  font-size: max(16px, 1.5vw);
+  font-size: max(14px, 1.5vw);
   background-color: rgb(20, 27, 44);
   color: white;
   border: 2px solid rgb(176, 107, 49);
@@ -348,7 +348,7 @@ h1{
 
 /*Committees*/
 .body_UNSC{
-  background-image: url("Israel\ x\ Palestine.webp");
+  background-image: url("AI-drone.jpeg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -373,6 +373,30 @@ h1{
 
 .body_FISD{
   background-image: url("Duma.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.body_UNOOSA{
+  background-image: url("space_photo.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.body_UNHRC{
+  background-image: url("arab-spring.avif");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.body_CrisisCommittee{
+  background-image: url("crash-of-29.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -684,7 +708,25 @@ height: auto;
   margin-right: -1.5vw;
 }
 
-.day{
+.day{ 
   font-size: max(14px, 1.75vw);
   font-weight: bold;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: max(10px, 1.25vw);
+}
+
+td, th {
+  border: 1px solid black;
+  padding: 0.75vw;
+  text-align: center;
+}
+
+th {
+  background-color: rgb(176, 107, 49);
+  color: white;
 }
