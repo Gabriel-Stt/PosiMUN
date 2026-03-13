@@ -730,3 +730,88 @@ th {
   background-color: rgb(176, 107, 49);
   color: white;
 }
+
+/* título grande */
+
+.posimun_past_title{
+text-align:center;
+margin-bottom:3vw;
+}
+
+.posimun_past_title h1{
+font-size:max(30px,3vw);
+color:rgb(176,107,49);
+}
+
+
+/* bloco de cada edição */
+
+.posimun_history{
+display:flex;
+align-items:center;
+gap:3vw;
+margin-bottom:4vw;
+}
+
+
+/* imagens */
+
+.posimun_images{
+flex:40%;
+display:flex;
+gap:1vw;
+overflow-x:auto;
+}
+
+.posimun_img{
+width:18vw;
+height:18vw;
+object-fit:cover;
+border-radius:25px;
+box-shadow:0 5px 15px rgba(0,0,0,0.4);
+}
+
+
+/* texto */
+
+.posimun_text{
+flex:60%;
+font-size:max(12px,0.9vw);
+line-height:max(20px,1.4vw);
+}
+
+
+/* título da edição */
+
+.posimun_year{
+font-family:"EB Garamond";
+font-size:max(20px,2vw);
+color:rgb(176,107,49);
+margin-bottom:0.5vw;
+}
+
+
+/* responsivo */
+
+@media (max-width:900px){
+
+.posimun_history{
+flex-direction:column;
+}
+
+.posimun_img{
+width:60vw;
+height:40vw;
+}
+
+.posimun_text{
+font-size:3.5vw;
+line-height:5vw;
+}
+
+}
+
+.past_editions_text{
+  flex:60%;
+  font-size:max(15px,1.2vw)
+}
