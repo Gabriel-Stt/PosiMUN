@@ -617,9 +617,11 @@ font-weight: bold;
 
 
 .chairs_photo {
-border-radius: 100000px;
+border-radius: 50%;
 width: 15vw;
-height: auto;
+height: 15vw;
+object-fit: cover;
+object-position: center top;
 }
 
 
