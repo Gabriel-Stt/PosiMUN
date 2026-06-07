@@ -60,6 +60,12 @@ h1{
  .PosiMUN_logo_círculo{
   height: max(4.5vw, 50px);
 }
+
+@media (max-width: 499px) {
+  .PosiMUN_logo_círculo {
+    height: 8vw;
+  }
+}
  .buttons{
   flex: 45vw;
   display: flex;
@@ -801,9 +807,16 @@ margin-bottom:0.5vw;
 flex-direction:column;
 }
 
+.posimun_images{
+width:100%;
+max-width:100%;
+overflow-x:auto;
+}
+
 .posimun_img{
 width:60vw;
 height:40vw;
+flex-shrink:0;
 }
 
 .posimun_text{
@@ -816,4 +829,195 @@ line-height:5vw;
 .past_editions_text{
   flex:60%;
   font-size:max(15px,1.2vw)
+}
+
+/* ===== Conference page tabs ===== */
+.conf_tabs_parent {
+  position: sticky;
+  top: calc(min(10vw, 100px) - 2px);
+  z-index: 9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(20, 27, 44);
+  border-bottom: 2px solid rgb(176, 107, 49);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  margin-left: -10px;
+  padding-right: 5px;
+}
+
+.conf_tab {
+  padding: max(10px, 1.2vw) max(20px, 3vw);
+  font-size: max(13px, 1.3vw);
+  font-family: "Manrope";
+  font-weight: 700;
+  color: white;
+  background-color: rgb(20, 27, 44);
+  border: none;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s;
+  letter-spacing: 0.05em;
+}
+
+.conf_tab.active,
+.conf_tab:hover {
+  color: rgb(176, 107, 49);
+  border-bottom-color: rgb(176, 107, 49);
+}
+
+/* ===== Meet the Team ===== */
+.team_banner_parent {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(20, 27, 44);
+  width: 100vw;
+  margin-left: -10px;
+  padding-right: 5px;
+  padding-top: 4vw;
+  padding-bottom: 1vw;
+}
+
+.team_banner_inner {
+  width: 70vw;
+  min-width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team_banner_photo {
+  width: 100%;
+  max-height: 38vw;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+.team_banner_subtitle {
+  color: rgb(212, 212, 212);
+  font-size: max(13px, 1.2vw);
+  font-weight: 300;
+  margin-top: 1.5vw;
+  letter-spacing: 0.06em;
+  text-align: center;
+}
+
+.team_dept_parent {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  margin-left: -10px;
+  padding-right: 5px;
+  padding-top: 4vw;
+  padding-bottom: 5vw;
+  box-shadow: 0 3px 10px black;
+}
+
+.team_dept_dark {
+  background-color: rgb(20, 27, 44);
+}
+
+.team_dept_light {
+  background-color: rgb(253, 253, 252);
+}
+
+.team_dept_inner {
+  width: 70vw;
+  min-width: 350px;
+}
+
+.team_dept_title {
+  font-family: "EB Garamond";
+  font-size: max(26px, 2.8vw);
+  font-weight: bold;
+  color: rgb(176, 107, 49);
+  text-align: center;
+  margin-bottom: 2.5vw;
+  position: relative;
+}
+
+.team_dept_title::after {
+  content: "";
+  display: block;
+  width: 5vw;
+  min-width: 40px;
+  height: 3px;
+  background-color: rgb(176, 107, 49);
+  border-radius: 2px;
+  margin: 0.6vw auto 0;
+}
+
+.team_group_photo {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  margin-bottom: 3.5vw;
+}
+
+.team_members_grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3vw;
+}
+
+.member_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: max(130px, 13vw);
+}
+
+.member_photo {
+  width: max(110px, 11vw);
+  height: max(110px, 11vw);
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 20%;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+  border: 3px solid rgb(176, 107, 49);
+  margin-bottom: max(8px, 0.8vw);
+}
+
+.solo_member_label {
+  text-align: center;
+  margin-top: -2vw;
+  margin-bottom: 1vw;
+}
+
+.team_dept_dark .member_name {
+  font-family: "EB Garamond";
+  font-size: max(14px, 1.35vw);
+  font-weight: bold;
+  color: white;
+  margin: 0 0 4px;
+}
+
+.team_dept_light .member_name {
+  font-family: "EB Garamond";
+  font-size: max(14px, 1.35vw);
+  font-weight: bold;
+  color: rgb(20, 27, 44);
+  margin: 0 0 4px;
+}
+
+.member_role {
+  font-size: max(11px, 1vw);
+  font-weight: 300;
+  color: rgb(176, 107, 49);
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .team_members_grid {
+    gap: 7vw;
+  }
+  .member_photo {
+    width: 26vw;
+    height: 26vw;
+  }
 }
