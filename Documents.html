@@ -45,7 +45,19 @@
                  </a>
                 </div>
             </div>
+            <button class="hamburger_btn" id="hamburger_btn" onclick="toggleMenu()" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
+    </div>
+    <div class="mobile_nav_overlay" id="mobile_nav_overlay"></div>
+   <div class="mobile_nav" id="mobile_nav">
+        <a href="index.html" class="mobile_nav_link">Home</a>
+        <a href="Documents.html" class="mobile_nav_link">Documents</a>
+        <a href="Conference.html" class="mobile_nav_link">Conference</a>
+        <a href="#rodapé" class="mobile_nav_link" onclick="closeMobileMenu()">Contact</a>
     </div>
    <div class="title_parent">
         <h1>
@@ -189,5 +201,27 @@
             </div>
         </div>
     </div>
+    <script>
+        function toggleMenu() {
+            document.getElementById('mobile_nav').classList.toggle('open');
+            document.getElementById('hamburger_btn').classList.toggle('active');
+            document.getElementById('mobile_nav_overlay').classList.toggle('open');
+        }
+        function closeMobileMenu() {
+            document.getElementById('mobile_nav').classList.remove('open');
+            document.getElementById('hamburger_btn').classList.remove('active');
+            document.getElementById('mobile_nav_overlay').classList.remove('open');
+        }
+        document.addEventListener('click', function(e) {
+            var nav = document.getElementById('mobile_nav');
+            var btn = document.getElementById('hamburger_btn');
+            var overlay = document.getElementById('mobile_nav_overlay');
+            if (nav && nav.classList.contains('open') && !nav.contains(e.target) && !btn.contains(e.target)) {
+                nav.classList.remove('open');
+                btn.classList.remove('active');
+                if (overlay) overlay.classList.remove('open');
+            }
+        });
+    </script>
 </body>
 </html>

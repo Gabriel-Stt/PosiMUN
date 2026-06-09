@@ -44,7 +44,7 @@ h1{
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 10;
+  z-index: 21;
 }
  .header{
   height: 10vw;
@@ -1019,5 +1019,129 @@ line-height:5vw;
   .member_photo {
     width: 26vw;
     height: 26vw;
+  }
+}
+
+/* ===== Mobile Navigation — Hamburger Menu & Drawer ===== */
+.hamburger_btn {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 26px;
+  height: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.hamburger_btn span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(176, 107, 49);
+  border-radius: 2px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.hamburger_btn.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger_btn.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger_btn.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.mobile_nav_overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  z-index: 19;
+}
+
+.mobile_nav_overlay.open {
+  display: block;
+}
+
+.mobile_nav {
+  display: none;
+}
+
+.mobile_nav_link {
+  display: block;
+  padding: 20px 28px;
+  color: white;
+  text-decoration: none;
+  font-family: "Manrope";
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.mobile_nav_link:hover, .mobile_nav_link:active {
+  color: rgb(176, 107, 49);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+@media (max-width: 600px) {
+  .buttons {
+    display: none !important;
+  }
+  .hamburger_btn {
+    display: flex;
+  }
+  .header {
+    width: 90vw;
+  }
+  .mobile_nav {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 72%;
+    background-color: rgb(20, 27, 44);
+    z-index: 20;
+    border-left: 2px solid rgb(176, 107, 49);
+    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.6);
+    padding-top: calc(min(10vw, 100px) + 18px);
+    transform: translateX(100%);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .mobile_nav.open {
+    transform: translateX(0);
+  }
+  /* anchor header flush to top — removes the -2px clip */
+  .header_parent {
+    top: 0;
+    margin-top: 0;
+  }
+  body {
+    margin-top: 0;
+  }
+  .body_frontpage,
+  .body_UNSC,
+  .body_ECOSOC,
+  .body_HOR,
+  .body_FISD,
+  .body_UNOOSA,
+  .body_UNHRC,
+  .body_CrisisCommittee {
+    background-attachment: scroll;
+  }
+  /* push title content below the header so it appears vertically symmetric */
+  .title_parent {
+    padding-top: 10vw;
+    box-sizing: border-box;
   }
 }
